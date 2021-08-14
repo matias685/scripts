@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Installing dependencies
-sudo pacman -S libx11 libxft libxinerama base-devel
+sudo apt-get install libx11-dev libxft-dev libxinerama-dev
 
 # Cloning suckless builds
 git clone https://github.com/matias685/suckless ~/src/
