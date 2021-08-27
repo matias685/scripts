@@ -1,14 +1,14 @@
 #!/bin/sh
 
 # Installing dependencies
-sudo apt-get install libx11-dev libxft-dev libxinerama-dev
+sudo xbps-install -S libx11-devel libxft-devel libxinerama-devel
 
 # Cloning suckless builds
 git clone https://github.com/matias685/suckless ~/src/
 
 # Installing suckless builds
-cd ~/src/suckless/dwm && make && sudo make install 
-cd ~/src/suckless/st && make && sudo make install
-cd ~/src/suckless/dmenu && make && sudo make install
-cd ~/src/suckless/slstatus && make && sudo make install
+cd ~/src/dwm && make && sudo make install 
+cd ~/src/st && make && sudo make install
+cd ~/src/dmenu && make && sudo make install
+cd ~/src/slstatus && make && sudo make install
 
