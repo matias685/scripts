@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Installing dependencies
-sudo xbps-install -S libx11-devel libxft-devel libxinerama-devel
+sudo xbps-install -S libX11-devel libXft-devel libXinerama-devel pkg-config gcc make
 
 # Cloning suckless builds
 git clone https://github.com/matias685/suckless ~/src/
