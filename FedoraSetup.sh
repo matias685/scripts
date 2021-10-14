@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #Setup keyboard
-sudo echo 'options hid_apple fnmode=2'
-sudo echo 'options hid_apple swap_opt_cmd=1'
+sudo echo 'options hid_apple fnmode=2' | sudo tee /etc/modprobe.d/hid_apple.conf
+sudo echo 'options hid_apple swap_opt_cmd=1' | sudo tee /etc/modprobe.d/hid_apple.conf
 
 #Setup Firewalld
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
