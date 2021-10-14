@@ -46,6 +46,6 @@ flatpak remote-add --user gnome-nightly https://nightly.gnome.org/gnome-nightly.
 flatpak remove --unused
 
 # Install flatpaks
-flatpak install flathub com.github.tchx84.Flatseal org.chromium.Chromium org.telegram.desktop org.videolan.VLC org.gnome.TextEditor org.gnome.Lollypop com.spotify.Client org.qbittorrent.qBittorrent com.discordapp.Discord org.gnome.Epiphany org.gnome.Geary org.gnome.gitlab.YaLTeR.VideoTrimmer fr.romainvigier.MetadataCleaner -y
+flatpak install flathub com.github.tchx84.Flatseal org.chromium.Chromium org.telegram.desktop org.videolan.VLC org.gnome.TextEditor org.gnome.Lollypop com.spotify.Client org.qbittorrent.qBittorrent com.discordapp.Discord org.gnome.Epiphany org.gnome.Geary org.gnome.gitlab.YaLTeR.VideoTrimmer fr.romainvigier.MetadataCleaner com.bitwarden.desktop -y
 
 output "All done! You have to reboot now."
