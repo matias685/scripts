@@ -37,7 +37,7 @@ sudo dnf -y remove abrt nm-connection-editor mozilla-filesystem quota* nmap-ncat
 sudo dnf config-manager --set-disabled fedora-cisco-openh264 -y
 
 #Install packages that I use
-sudo dnf -y install neofetch git-core vim-minimal gnome-tweaks gnome-extensions-app gnome-system-monitor git-core setroubleshoot gnome-software PackageKit PackageKit-command-not-found fedora-workstation-repositories zsh
+sudo dnf -y install neofetch git-core vim-minimal gnome-tweaks gnome-extensions-app fedora-workstation-repositories zsh util-linux-user
 
 #Setting up Flatpak
 flatpak remote-add --user flathub https://flathub.org/repo/flathub.flatpakrepo
