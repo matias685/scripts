@@ -1,0 +1,11 @@
+#!/bin/sh
+
+DMENU='dmenu -i -l 4'
+choice=$(echo "shut down\nreboot\nlog out\ncancel" | $DMENU)
+
+case "$choice" in
+     shut down) poweroff ;;
+     reboot) reboot ;;
+     log out) pkill dwm ;;
+     cancel) exit 0 ;;
+esac
