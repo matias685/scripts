@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #Setup keyboard
-sudo echo 'options hid_apple fnmode=2' | sudo tee /etc/modprobe.d/hid_apple.conf
-sudo echo 'options hid_apple swap_opt_cmd=1' | sudo tee /etc/modprobe.d/hid_apple.conf
+echo 'options hid_apple fnmode=2' | sudo tee /etc/modprobe.d/hid_apple.conf
+echo 'options hid_apple swap_opt_cmd=1' | sudo tee /etc/modprobe.d/hid_apple.conf
 
 #Setup Firewalld
 sudo firewall-cmd --permanent --remove-port=1025-65535/udp
@@ -13,16 +13,12 @@ sudo firewall-cmd --permanent --remove-service=samba-client
 sudo firewall-cmd --reload
 
 #Speed up DNF
-sudo echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf
-sudo echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf
-sudo echo 'deltarpm=true' | sudo tee -a /etc/dnf/dnf.conf
+echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf
+echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf
+echo 'deltarpm=true' | sudo tee -a /etc/dnf/dnf.conf
 
-#Update packages and firmware
+#Update packages
 sudo dnf upgrade -y
-sudo fwupdmgr get-devices
-sudo fwupdmgr refresh --force
-sudo fwupdmgr get-updates -y
-sudo fwupdmgr update -y
 
 #Setup RPM Fusion
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
