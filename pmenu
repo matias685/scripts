@@ -1,11 +1,11 @@
 #!/bin/sh
 
 DMENU='dmenu -i -l 4'
-choice=$(echo "shut down\nreboot\nlog out\ncancel" | $DMENU)
+choice=$(echo "shutdown\nreboot\nsuspend\ncancel" | $DMENU)
 
 case "$choice" in
-     shut down) poweroff ;;
+     shutdown) poweroff ;;
      reboot) reboot ;;
-     log out) pkill dwm ;;
+     suspend) systemctl suspend ;;
      cancel) exit 0 ;;
 esac
