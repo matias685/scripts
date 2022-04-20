@@ -1,0 +1,5 @@
+#!/bin/sh
+cat /dev/null > $HOME/.config/xsettingsd/xsettingsd.conf
+echo 'Net/ThemeName "Adwaita-dark"\nNet/IconThemeName "Papirus-Dark"' > $HOME/.config/xsettingsd/xsettingsd.conf
+pkill xsettingsd
+xsettingsd
