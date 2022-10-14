@@ -1,0 +1,12 @@
+#!/bin/sh
+
+wall=~/.config/wall.png
+wal -i $wall
+
+sed -i '/Urg/d' $HOME/.cache/wal/colors-wal-dwm.h
+echo "Recompiling suckless tools..."
+(cd $HOME/.local/src/dwm && doas make clean install)
+(cd $HOME/.local/src/st && doas make clean install)
+(cd $HOME/.local/src/dmenu && doas make clean install)
+
+echo "^_^ Restart dwm for new look!"

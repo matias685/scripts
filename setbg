@@ -1,5 +1,5 @@
 #!/bin/sh
 
-[ -f "$1" ] && cp "$1" ~/.config/wall.png && notify-send -i "$HOME/.config/wall.png" "Wallpaper changed."
+[ -f "$1" ] && cp "$1" ~/.local/share/backgrounds/current-wallpaper.png && notify-send -i "$HOME/.local/share/backgrounds/current-wallpaper.png" "Wallpaper changed."
 
-xwallpaper --zoom ~/.config/wall.png
+xwallpaper --zoom ~/.local/share/backgrounds/current-wallpaper.png

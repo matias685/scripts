@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DMENU='dmenu -i -l 4'
+DMENU='dmenu -l 4'
 choice=$(echo "shutdown\nreboot\nsuspend\ncancel" | $DMENU)
 
 case "$choice" in
