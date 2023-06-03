@@ -7,3 +7,11 @@ sudo ln -sf dash /bin/sh
 # enable firewall
 sudo ufw enable
 sudo systemctl enable --now ufw.service
+
+# install AUR helper
+sudo pacman -S --needed base-devel
+mkdir $HOME/git
+cd $HOME/git
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
